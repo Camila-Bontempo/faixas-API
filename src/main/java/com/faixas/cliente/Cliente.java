@@ -3,32 +3,40 @@
  */
 package com.faixas.cliente;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author Camila Bontempo
  *
  */
+@Entity // This tells Hibernate to make a table out of this class
 public class Cliente {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
+
 	private String nome;
-	
+
 	private String cpf;
-	
+
 	private String rua;
-	
+
 	private Integer numero;
-	
+
 	private String complemento;
-	
+
 	private String bairro;
-	
+
 	private String cep;
-	
+
 	private String cidade;
-	
+
 	private String telefone;
-	
+
 	private String email;
 
 	/**
@@ -192,7 +200,5 @@ public class Cliente {
 				+ ", getBairro()=" + getBairro() + ", getCep()=" + getCep() + ", getCidade()=" + getCidade()
 				+ ", getTelefone()=" + getTelefone() + ", getEmail()=" + getEmail() + "]";
 	}
-	
-	
-	
+
 }
