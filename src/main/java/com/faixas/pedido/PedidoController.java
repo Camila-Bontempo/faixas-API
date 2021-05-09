@@ -5,6 +5,7 @@ package com.faixas.pedido;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +20,29 @@ public class PedidoController {
 	private PedidoRepository pedidoRepository;
 
 	@PostMapping(path = "/add") // Map ONLY POST Requests
-	public @ResponseBody String addNewPedido() {
+	public @ResponseBody String addNewPedido(Pedido pedido) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 
-		Pedido n = new Pedido();
-		pedidoRepository.save(n);
-		return "Saved";
+		try {
+			pedidoRepository.save(pedido);
+			return "Pedido Adicionado com Sucesso!";
+		} catch (Exception e) {
+			return e.getMessage();
+		}
+	}
+	
+	@DeleteMapping(path = "/delete")
+	public @ResponseBody String deletePedido(Integer id) {
+		
+		Pedido pedido = pedidoRepository.findById(id).get();
+		
+		try {
+			pedidoRepository.delete(pedido);
+			return "Pedido Deletado com Sucesso!";
+		} catch (Exception e) {
+			return e.getMessage();
+		}
 	}
 
 	@GetMapping(path = "/all")

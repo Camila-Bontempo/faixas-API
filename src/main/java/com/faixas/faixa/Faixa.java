@@ -33,7 +33,7 @@ public class Faixa {
 	
 	private Double valorFaixa;
 	
-	private Pedido pedido;
+	private Integer pedido;
 
 	/**
 	 * @return the id
@@ -136,14 +136,14 @@ public class Faixa {
 	/**
 	 * @return the pedido
 	 */
-	public Pedido getPedido() {
+	public Integer getPedido() {
 		return pedido;
 	}
 
 	/**
 	 * @param pedido the pedido to set
 	 */
-	public void setPedido(Pedido pedido) {
+	public void setPedido(Integer pedido) {
 		this.pedido = pedido;
 	}
 

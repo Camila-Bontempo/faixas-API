@@ -39,7 +39,7 @@ public class Pedido {
 	
 	private String status;
 	
-	private Cliente cliente;
+	private Integer cliente;
 
 	/**
 	 * @return the id
@@ -170,14 +170,14 @@ public class Pedido {
 	/**
 	 * @return the cliente
 	 */
-	public Cliente getCliente() {
+	public Integer getCliente() {
 		return cliente;
 	}
 
 	/**
 	 * @param cliente the cliente to set
 	 */
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Integer cliente) {
 		this.cliente = cliente;
 	}
 

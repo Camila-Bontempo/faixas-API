@@ -1,0 +1,23 @@
+{
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 140,
+  "editor.wrappingIndent": "deepIndent",
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapLineLength": 140,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 140,
+  "tslint.jsEnable": true
+}
