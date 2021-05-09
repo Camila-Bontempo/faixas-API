@@ -1,5 +1,4 @@
 # Faixas
-This project is the back-end of a fictitious banner store. It was written in Java and uses MySql as a database.
 
 Faixas contém o sistema de uma loja de banners completo, Backend e Frontend.
 
